@@ -65,6 +65,7 @@ nav ul li div {
 	padding-top: 20px;
 	height: 37px;
 	text-align:  center;
+	color: #3EC2F3;
 }
 nav ul li div:hover {
 	border-bottom: 3px solid #49CBCD;
@@ -269,7 +270,7 @@ input[type="submit"]:hover {
 	#menu {
 		margin: 20px 25px;
 		float: right;
-		color:#678282;
+		color: #3EC2F3;
 		cursor: pointer;
 	}
 	#nav {
