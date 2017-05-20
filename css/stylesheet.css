@@ -93,6 +93,12 @@ header {
 	height: 550px;
 	color: white;
 }
+.team a:hover {
+	color: black;
+}
+.team a:hover .foto p {
+	display: block;
+}
 .member {
 	float: left;
 	width: 21%;
@@ -109,11 +115,21 @@ header {
 	margin-bottom: 40px;
 	border-radius: 75px;
 }
+.foto p {
+	display: none;
+	color: #F46D6D;
+	padding-top: 35px;
+	font-size: 60px;
+	font-weight: bold;
+}
 .plan{
 	float: left;
 	margin: 70px 1% 50px 1%;
 	width: 31%;
 	height: 80%;
+}
+.plan p{
+	color: #8C9299; 
 }
 .plan > div {
 	padding: 7px;
@@ -153,58 +169,94 @@ header {
 .contact .contents div:last-child {
 	text-align: left;
 }
-#face, #twit, #g {
- margin: 5px;
- float: left;
- width: 50px;
- height: 50px;
- border-radius: 25px;
- text-align: center;
- color: white;
+.contact h2 + p {
+	color: #A1A1A1;
 }
-#face:hover, #twit:hover, #g:hover, input[type="submit"]:hover {
-border: 2px solid white;
+#face, #twit, #g {
+ 	margin: 5px;
+	float: left;
+ 	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+ 	text-align: center;
+ 	color: white;
 }
 #face {
-background-color: #3B5997;
-padding-top: 6px;
-height: 44px;
-font-weight: bold;
+	background-color: #3B5997;
+	padding-top: 6px;
+	height: 44px;
+	font-weight: bold;
+}
+#face:hover {
+	border: 2px solid white;
+	padding-top: 4px;
+	width: 46px;
+	height: 40px;
 }
 #face h2 {
-font-weight: bold;
+	font-weight: bold;
 }
 #twit {
-background: url(../img/twitter.png) no-repeat center center;
-background-size: cover;
+	background: url(../img/twitter.png) no-repeat center center;
+	background-size: cover;
+	background-color: #3EC2F3; 
+}
+#twit:hover {
+	border: 2px solid white;
+	width: 46px;
+	height: 46px;
 }
 #g {
-background-color: #E44C41;
-padding-top: 4px;
-height: 46px;
+	background-color: #E44C41;
+	padding-top: 4px;
+	height: 46px;
+}
+#g:hover {
+	border: 2px solid white;
+	padding-top: 2px;
+	width: 46px;
+	height: 42px;
 }
 .contact form {
 	width: 100%;
 }
 .contact input {
-	margin: 2%;
-	width: 43%;
+	margin: 2% 0 2% 0;
+	width: 41%;
 	float: left;
+	border-radius: 3px;
+	border: none;
+	padding:7px;
+	
+}
+.contact input:nth-child(2) {
+	float: right;
+	margin-right: 4%;
+}
+.contact input::placeholder, .contact textarea::placeholder {
+	color: #C5C5C5; 
 }
 .contact textarea {
-	margin: 2%;
-	width: 91%;
+	margin: 2% 0 2% 0;
+	width: calc(96% - 16px);
 	float: left;
 	height: 50%;
+	border-radius: 3px;
+	border: none;
+	padding:8px;
 }
 input[type="submit"] {
+	margin-right: 4%; 
 	float: right;
-	margin-right: 5%;
 	background-color: #49CBCD;
-	border: none;
 	color: white;
-	padding: 5px;
-	width: 30%;
+	padding: 8px;
+	width: 25%;
+	font-size: 20px;
+}
+input[type="submit"]:hover {
+	border: 2px solid white;
+	padding: 6px;
 }
 .wrap {
 	width: 90%;
@@ -233,9 +285,13 @@ input[type="submit"] {
 		padding: 5px 0;
 	}
 	#nav div {
-	padding-top: 5px;
-	height: 20px;
-	text-align:  center;
+		padding-top: 5px;
+		padding-bottom: 2px;
+		height: 20px;
+		text-align:  center;
+	}
+	#nav div:hover {
+		height: 17px;
 	}
 	.team {
 		height: 920px;
@@ -265,5 +321,24 @@ input[type="submit"] {
 	}
 	.contact .contents > div:last-child {
 		padding-top: 300px;
+	}
+}
+@media (max-width: 480px) {
+	.member {
+		float: none;
+		margin: auto;
+		margin-top: 20px;
+		width: 70%;
+		height: 80%;
+	}
+	.contact {
+		height: 900px;
+	}
+		.plans {
+	padding: 20px 0 20px 0;
+	height: 1350px;
+	}
+	.team {
+		height: 1700px;
 	}
 }
